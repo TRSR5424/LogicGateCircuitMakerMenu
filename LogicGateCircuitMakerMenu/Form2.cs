@@ -68,13 +68,13 @@ namespace LogicGateCircuitMakerMenu
         {
             var ofd = new OpenFileDialog()
             {
-                DefaultExt = ".vcb"
+                Filter = "Only .vcb|*.vcb"
             };
             if (ofd.ShowDialog() == DialogResult.OK)
             {
                 //Start Circuit Board sending it the file location
                 ProcessStartInfo startInfo = new();
-                startInfo.FileName = "C:\\Users\\archi\\Coding\\Project\\Logic Gate Circuit Maker\\GUI Stf\\bin\\Debug\\net6.0-windows\\LogicGateCircuitMaker.exe";
+                startInfo.FileName = "C:\\Users\\archi\\Coding\\Project\\!(OLD) Logic Gate Circuit Maker\\GUI Stf\\bin\\Debug\\net6.0-windows\\LogicGateCircuitMaker.exe";
                 startInfo.UseShellExecute = true;
                 startInfo.Arguments = $"{_userId} \"{ofd.FileName}\"";
                 Process.Start(startInfo);
@@ -86,7 +86,7 @@ namespace LogicGateCircuitMakerMenu
         {
             //Starts Circuit Board
             ProcessStartInfo startInfo = new ProcessStartInfo();
-            startInfo.FileName = "C:\\Users\\archi\\Coding\\Project\\Logic Gate Circuit Maker\\GUI Stf\\bin\\Debug\\net6.0-windows\\LogicGateCircuitMaker.exe";
+            startInfo.FileName = "C:\\Users\\archi\\Coding\\Project\\!(OLD) Logic Gate Circuit Maker\\GUI Stf\\bin\\Debug\\net6.0-windows\\LogicGateCircuitMaker.exe";
             startInfo.Arguments = _userId.ToString();
             Process.Start(startInfo);
             Close();
@@ -115,7 +115,7 @@ namespace LogicGateCircuitMakerMenu
 
             //Start Circuit Board sending it the temp file location
             ProcessStartInfo startInfo = new();
-            startInfo.FileName = "C:\\Users\\archi\\Coding\\Project\\Logic Gate Circuit Maker\\GUI Stf\\bin\\Debug\\net6.0-windows\\LogicGateCircuitMaker.exe";
+            startInfo.FileName = "C:\\Users\\archi\\Coding\\Project\\!(OLD) Logic Gate Circuit Maker\\GUI Stf\\bin\\Debug\\net6.0-windows\\LogicGateCircuitMaker.exe";
             startInfo.UseShellExecute = true;
             startInfo.Arguments = $"{_userId} {filename} {buttonText}";
             Process.Start(startInfo);
